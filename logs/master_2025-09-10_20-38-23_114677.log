@@ -1,0 +1,8 @@
+2025-09-10 20:38:23.118 | INFO     | __main__:main:146 - Starting ZanSoc master node
+2025-09-10 20:38:23.119 | INFO     | __main__:load_config:47 - Loaded configuration from /Users/ashutosh/zansoc-beta/src/master/../../config/master.yaml
+2025-09-10 20:38:23.119 | INFO     | __main__:start_ray_head:92 - Starting Ray head node with the following configuration:
+2025-09-10 20:38:23.119 | INFO     | __main__:start_ray_head:93 -   - Port: 6379
+2025-09-10 20:38:23.119 | INFO     | __main__:start_ray_head:94 -   - Dashboard: http://0.0.0.0:8265
+2025-09-10 20:38:23.119 | INFO     | __main__:start_ray_head:95 -   - Resources: {'CPU': 4, 'memory': 4000000000}
+2025-09-10 20:38:23.125 | ERROR    | __main__:start_ray_head:128 - Failed to start Ray head node: When connecting to an existing cluster, resources must not be provided.
+2025-09-10 20:38:23.125 | ERROR    | __main__:main:166 - Failed to start master node

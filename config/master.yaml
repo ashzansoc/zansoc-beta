@@ -1,0 +1,36 @@
+# Ray Cluster Configuration - Master Node
+
+cluster_name: "zansoc-cluster"
+
+# Redis port for the primary Ray object store
+port: 6379
+
+# Password for Redis authentication
+redis_password: "zansoc_secure_password_change_me"
+
+# Dashboard configuration
+dashboard_host: "0.0.0.0"
+dashboard_port: 8265
+
+# System resource allocation
+resources:
+  CPU: 4  # Number of CPUs to allocate to Ray
+  memory: 4000000000  # ~4GB in bytes
+
+# Cluster settings
+max_workers: 3  # Maximum number of worker nodes
+uptime_s: 86400  # Cluster uptime in seconds (24 hours)
+
+# Network settings
+allow_external_connections: true
+
+# Logging
+log_to_driver: true
+logging_level: "info"
+
+# Model settings
+model_config:
+  model_name: "TinyLlama/TinyLlama-1.1B-Chat-v1.0"  # Small model suitable for Raspberry Pi
+  quantization: "int8"  # Quantize model to reduce memory footprint
+  batch_size: 1
+  max_length: 512

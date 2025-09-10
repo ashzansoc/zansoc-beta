@@ -1,0 +1,8 @@
+2025-09-10 20:37:53.457 | INFO     | __main__:main:147 - Starting ZanSoc master node
+2025-09-10 20:37:53.458 | INFO     | __main__:load_config:47 - Loaded configuration from /Users/ashutosh/zansoc-beta/src/master/../../config/master.yaml
+2025-09-10 20:37:53.458 | INFO     | __main__:start_ray_head:93 - Starting Ray head node with the following configuration:
+2025-09-10 20:37:53.458 | INFO     | __main__:start_ray_head:94 -   - Port: 6379
+2025-09-10 20:37:53.458 | INFO     | __main__:start_ray_head:95 -   - Dashboard: http://0.0.0.0:8265
+2025-09-10 20:37:53.458 | INFO     | __main__:start_ray_head:96 -   - Resources: {'CPU': 4, 'memory': 4000000000}
+2025-09-10 20:37:53.458 | ERROR    | __main__:start_ray_head:129 - Failed to start Ray head node: Unknown keyword argument(s): port
+2025-09-10 20:37:53.458 | ERROR    | __main__:main:167 - Failed to start master node

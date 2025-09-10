@@ -1,0 +1,17 @@
+2025-09-10 20:39:11.494 | INFO     | __main__:main:145 - Starting ZanSoc master node
+2025-09-10 20:39:11.494 | INFO     | __main__:load_config:47 - Loaded configuration from /Users/ashutosh/zansoc-beta/src/master/../../config/master.yaml
+2025-09-10 20:39:11.494 | INFO     | __main__:start_ray_head:91 - Starting Ray head node with the following configuration:
+2025-09-10 20:39:11.494 | INFO     | __main__:start_ray_head:92 -   - Port: 6379
+2025-09-10 20:39:11.494 | INFO     | __main__:start_ray_head:93 -   - Dashboard: http://0.0.0.0:8265
+2025-09-10 20:39:11.495 | INFO     | __main__:start_ray_head:94 -   - Resources: {'CPU': 4, 'memory': 4000000000}
+2025-09-10 20:39:15.862 | INFO     | __main__:start_ray_head:101 - Ray cluster started with 1 nodes
+2025-09-10 20:39:15.863 | INFO     | __main__:start_ray_head:105 - 
+To connect worker nodes, use the following address:
+2025-09-10 20:39:15.863 | INFO     | __main__:start_ray_head:106 -   ray start --address='172.20.10.13:6379' --redis-password='zansoc_secure_password_change_me'
+2025-09-10 20:39:15.863 | INFO     | __main__:start_ray_head:110 - 
+Master node will run for 86400 seconds
+2025-09-10 20:39:15.863 | INFO     | __main__:start_ray_head:111 - Press Ctrl+C to stop the master node
+2025-09-10 21:09:25.713 | INFO     | __main__:start_ray_head:121 - Cluster status: 1 nodes connected
+2025-09-10 21:39:21.807 | INFO     | __main__:start_ray_head:121 - Cluster status: 1 nodes connected
+2025-09-10 21:49:16.335 | INFO     | __main__:start_ray_head:121 - Cluster status: 1 nodes connected
+2025-09-10 21:59:16.549 | INFO     | __main__:start_ray_head:121 - Cluster status: 1 nodes connected

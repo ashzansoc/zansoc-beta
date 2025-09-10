@@ -1,0 +1,19 @@
+# Core dependencies
+ray[default]>=2.45.0
+pyarrow>=14.0.1
+protobuf>=4.25.1
+
+# ML dependencies
+torch>=2.1.0
+transformers>=4.36.0
+sentencepiece>=0.1.99
+
+# Utilities
+numpy>=1.24.0
+pandas>=2.1.0
+tqdm>=4.66.1
+requests>=2.31.0
+
+# Monitoring and logging
+wandb>=0.16.0
+loguru>=0.7.2
