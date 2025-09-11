@@ -1,0 +1,8 @@
+2025-09-11 18:51:28.219 | INFO     | __main__:main:156 - Starting ZanSoc master node
+2025-09-11 18:51:28.220 | INFO     | __main__:load_config:47 - Loaded configuration from /Users/ashutosh/zansoc-beta/src/master/../../config/master.yaml
+2025-09-11 18:51:28.221 | INFO     | __main__:start_ray_head:102 - Starting Ray head node with the following configuration:
+2025-09-11 18:51:28.221 | INFO     | __main__:start_ray_head:103 -   - Port: 6379
+2025-09-11 18:51:28.221 | INFO     | __main__:start_ray_head:104 -   - Dashboard: http://0.0.0.0:8265
+2025-09-11 18:51:28.221 | INFO     | __main__:start_ray_head:105 -   - Resources: {'CPU': 4, 'memory': 4000000000}
+2025-09-11 18:51:28.418 | ERROR    | __main__:start_ray_head:138 - Failed to start Ray head node: Failed to bind to 0.0.0.0:8265 because it's already occupied. You can use `ray start --dashboard-port ...` or `ray.init(dashboard_port=...)` to select a different port.
+2025-09-11 18:51:28.418 | ERROR    | __main__:main:176 - Failed to start master node

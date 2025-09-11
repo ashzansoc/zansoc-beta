@@ -1,0 +1,4 @@
+2025-09-11 18:59:15.557 | INFO     | __main__:main:160 - Starting ZanSoc master node
+2025-09-11 18:59:15.558 | INFO     | __main__:load_config:47 - Loaded configuration from /Users/ashutosh/zansoc-beta/src/master/../../config/master.yaml
+2025-09-11 18:59:15.558 | ERROR    | __main__:start_ray_head:142 - Failed to start Ray head node: cannot access local variable 'ip' where it is not associated with a value
+2025-09-11 18:59:15.558 | ERROR    | __main__:main:180 - Failed to start master node

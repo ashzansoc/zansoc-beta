@@ -1,14 +1,14 @@
-# Ray Cluster Configuration - Worker Node
+# ZanSoc Worker Node Configuration
 
 # Master node connection settings
 master_ip: "100.101.84.71"  # Tailscale IP
 master_port: 6379
 redis_password: "zansoc_secure_password_change_me"  # Must match master's password
 
-# Network settings
-log_to_driver: true
-logging_level: "info"
-log_dir: "/tmp/ray/logs"
+# Network settings for the worker (e.g., logging)
+log_to_driver: True
+logging_level: INFO
+log_dir: "logs"
 
 # Connection retry settings
 connection_retries: 5

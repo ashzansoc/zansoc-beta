@@ -87,8 +87,9 @@ def connect_to_master(config):
                 ray.init(
                     address=address,
                     _redis_password=redis_password,
-                    log_to_driver=log_to_driver,
-                    logging_level=logging_level
+                    ignore_reinit_error=True,
+                    # log_to_driver=log_to_driver,
+                    # logging_level=logging_level
                 )
                 
                 logger.info("Successfully connected to Ray head node")

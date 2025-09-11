@@ -54,7 +54,18 @@ def load_config(config_path):
 def get_public_ip():
     """Get the public-facing IP address of this machine"""
     try:
-        # This is a simple way to get the local IP, not the public IP
+        # Attempt to get the Tailscale IP address
+        import netifaces
+        for interface in netifaces.interfaces():
+            addresses = netifaces.ifaddresses(interface)
+            if netifaces.AF_INET in addresses:
+                for link in addresses[netifaces.AF_INET]:
+                    ip = link['addr']
+                    if ip.startswith("100.") and ip != "100.100.100.100":  # Tailscale IP usually starts with 100
+                        logger.info(f"Detected Tailscale IP: {ip}")
+                        return ip
+        logger.warning("No Tailscale IP found, falling back to local IP.")
+        # Fallback to local IP if Tailscale IP is not found
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         s.connect(("8.8.8.8", 80))
         ip = s.getsockname()[0]
@@ -76,32 +87,43 @@ def start_ray_head(config):
         resources = config.get("resources", {})
         log_to_driver = config.get("log_to_driver", True)
         logging_level = config.get("logging_level", "info")
+
+        # Get the IP address for binding
+        ip = get_public_ip()
+
+        # Set environment variables for Ray
+        # os.environ["RAY_ADDRESS"] = f"{ip}:{port}"
+        # os.environ["RAY_DASHBOARD_HOST"] = ip
         
         # Initialize Ray head node
         ray_init_args = {
-            "address": None,  # Start a new Ray cluster
-            "num_cpus": resources.get("CPU", 4),
+            # "num_cpus": resources.get("CPU", 4),
+            # "num_gpus": resources.get("GPU", 0),
             "dashboard_host": dashboard_host,
             "dashboard_port": dashboard_port,
             "log_to_driver": log_to_driver,
             "logging_level": logging_level,
             "include_dashboard": True,
+            # "_redis_password": redis_password,
+            # "node_ip_address": ip,  # Removed as it's an unknown keyword argument
         }
-        
+
         logger.info("Starting Ray head node with the following configuration:")
         logger.info(f"  - Port: {port}")
         logger.info(f"  - Dashboard: http://{dashboard_host}:{dashboard_port}")
         logger.info(f"  - Resources: {resources}")
-        
-        # Initialize Ray
-        ray.init(**ray_init_args)
-        
+
+        # Initialize Ray if not already initialized
+        if not ray.is_initialized():
+            ray.init(**ray_init_args)
+        else:
+            logger.info("Ray is already initialized, skipping ray.init() call.")
+
         # Get cluster info
         nodes_info = ray.nodes()
         logger.info(f"Ray cluster started with {len(nodes_info)} nodes")
         
         # Print connection information for workers
-        ip = get_public_ip()
         logger.info(f"\nTo connect worker nodes, use the following address:")
         logger.info(f"  ray start --address='{ip}:{port}' --redis-password='{redis_password}'")
         

@@ -1,0 +1,8 @@
+2025-09-12 00:54:17.645 | INFO     | __main__:main:124 - Starting ZanSoc worker node
+2025-09-12 00:54:17.646 | INFO     | __main__:load_config:46 - Loaded configuration from /Users/ashutosh/zansoc-beta/src/worker/../../config/worker.yaml
+2025-09-12 00:54:17.646 | INFO     | __main__:connect_to_master:81 - Connecting to Ray head node at 100.101.84.71:6379
+2025-09-12 00:54:17.684 | INFO     | __main__:connect_to_master:95 - Successfully connected to Ray head node
+2025-09-12 00:54:17.684 | INFO     | __main__:main:141 - Worker node connected successfully
+2025-09-12 00:54:17.684 | INFO     | __main__:main:145 - Worker node is running. Press Ctrl+C to stop.
+2025-09-12 00:54:18.753 | INFO     | __main__:main:150 - Received keyboard interrupt, shutting down...
+2025-09-12 00:54:18.810 | INFO     | __main__:main:155 - Disconnected from Ray cluster

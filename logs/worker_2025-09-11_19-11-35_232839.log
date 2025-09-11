@@ -1,0 +1,5 @@
+2025-09-11 19:11:35.235 | INFO     | __main__:main:123 - Starting ZanSoc worker node
+2025-09-11 19:11:35.235 | INFO     | __main__:load_config:46 - Loaded configuration from /Users/ashutosh/zansoc-beta/src/worker/../../config/worker.yaml
+2025-09-11 19:11:35.235 | INFO     | __main__:connect_to_master:81 - Connecting to Ray head node at 100.101.84.71:6379
+2025-09-11 22:21:28.731 | WARNING  | __main__:connect_to_master:97 - Connection attempt 1/5 failed: 
+2025-09-11 22:21:28.733 | INFO     | __main__:connect_to_master:99 - Retrying in 10 seconds...

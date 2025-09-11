@@ -13,6 +13,7 @@ numpy>=1.24.0
 pandas>=2.1.0
 tqdm>=4.66.1
 requests>=2.31.0
+netifaces
 
 # Monitoring and logging
 wandb>=0.16.0

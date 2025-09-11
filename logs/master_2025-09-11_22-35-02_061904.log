@@ -1,0 +1,14 @@
+2025-09-11 22:35:02.064 | INFO     | __main__:main:160 - Starting ZanSoc master node
+2025-09-11 22:35:02.064 | INFO     | __main__:load_config:47 - Loaded configuration from /Users/ashutosh/zansoc-beta/src/master/../../config/master.yaml
+2025-09-11 22:35:02.067 | INFO     | __main__:get_public_ip:65 - Detected Tailscale IP: 100.101.84.71
+2025-09-11 22:35:02.067 | INFO     | __main__:start_ray_head:107 - Starting Ray head node with the following configuration:
+2025-09-11 22:35:02.067 | INFO     | __main__:start_ray_head:108 -   - Port: 6379
+2025-09-11 22:35:02.067 | INFO     | __main__:start_ray_head:109 -   - Dashboard: http://0.0.0.0:8265
+2025-09-11 22:35:02.067 | INFO     | __main__:start_ray_head:110 -   - Resources: {'CPU': 4, 'memory': 4000000000}
+2025-09-11 22:35:04.093 | INFO     | __main__:start_ray_head:117 - Ray cluster started with 1 nodes
+2025-09-11 22:35:04.094 | INFO     | __main__:start_ray_head:120 - 
+To connect worker nodes, use the following address:
+2025-09-11 22:35:04.094 | INFO     | __main__:start_ray_head:121 -   ray start --address='100.101.84.71:6379' --redis-password='zansoc_secure_password_change_me'
+2025-09-11 22:35:04.094 | INFO     | __main__:start_ray_head:125 - 
+Master node will run for 86400 seconds
+2025-09-11 22:35:04.094 | INFO     | __main__:start_ray_head:126 - Press Ctrl+C to stop the master node

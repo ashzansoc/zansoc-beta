@@ -1,0 +1,10 @@
+2025-09-11 19:00:29.855 | INFO     | __main__:main:162 - Starting ZanSoc master node
+2025-09-11 19:00:29.856 | INFO     | __main__:load_config:47 - Loaded configuration from /Users/ashutosh/zansoc-beta/src/master/../../config/master.yaml
+2025-09-11 19:00:29.859 | INFO     | __main__:get_public_ip:65 - Detected Tailscale IP: 100.101.84.71
+2025-09-11 19:00:29.859 | INFO     | __main__:start_ray_head:106 - Starting Ray head node with the following configuration:
+2025-09-11 19:00:29.859 | INFO     | __main__:start_ray_head:107 -   - Port: 6379
+2025-09-11 19:00:29.859 | INFO     | __main__:start_ray_head:108 -   - Dashboard: http://0.0.0.0:8265
+2025-09-11 19:00:29.859 | INFO     | __main__:start_ray_head:109 -   - Resources: {'CPU': 4, 'memory': 4000000000}
+2025-09-11 19:00:29.860 | INFO     | __main__:get_public_ip:65 - Detected Tailscale IP: 100.101.84.71
+2025-09-11 19:00:29.860 | ERROR    | __main__:start_ray_head:144 - Failed to start Ray head node: Unknown keyword argument(s): node_ip_address
+2025-09-11 19:00:29.860 | ERROR    | __main__:main:182 - Failed to start master node
