@@ -66,12 +66,8 @@ def connect_to_master(config):
         master_ip = config.get("master_ip")
         master_port = config.get("master_port", 6379)
         redis_password = config.get("redis_password")
-        resources = config.get("resources", {})
-        num_cpus = config.get("num_cpus", 4)
-        num_gpus = config.get("num_gpus", 0)
         log_to_driver = config.get("log_to_driver", True)
         logging_level = config.get("logging_level", "info")
-        node_name = get_node_name(config)
         connection_retries = config.get("connection_retries", 5)
         connection_timeout_s = config.get("connection_timeout_s", 30)
         
@@ -82,22 +78,17 @@ def connect_to_master(config):
         # Prepare connection address
         address = f"{master_ip}:{master_port}"
         
-        logger.info(f"Connecting to Ray head node at {address} as {node_name}")
-        logger.info(f"Resources: {resources}")
+        logger.info(f"Connecting to Ray head node at {address}")
         
         # Try to connect with retries
         for attempt in range(connection_retries):
             try:
-                # Initialize Ray worker
+                # Initialize Ray worker - removed resource parameters
                 ray.init(
                     address=address,
                     _redis_password=redis_password,
-                    resources=resources,
-                    num_cpus=num_cpus,
-                    num_gpus=num_gpus,
                     log_to_driver=log_to_driver,
-                    logging_level=logging_level,
-                    name=node_name,
+                    logging_level=logging_level
                 )
                 
                 logger.info("Successfully connected to Ray head node")

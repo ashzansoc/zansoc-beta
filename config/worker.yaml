@@ -1,24 +1,11 @@
 # Ray Cluster Configuration - Worker Node
 
 # Master node connection settings
-master_ip: "master-node-address.example.com"  # Replace with actual master IP/DDNS
+master_ip: "100.101.84.71"  # Tailscale IP
 master_port: 6379
 redis_password: "zansoc_secure_password_change_me"  # Must match master's password
 
-# Worker identification
-node_name: "raspberry-pi-worker"  # Will be suffixed with a unique ID
-
-# System resource allocation
-resources:
-  CPU: 4  # Number of CPUs to allocate to Ray
-  memory: 2000000000  # ~2GB in bytes
-  custom_resource: 1.0  # Can be used for custom scheduling
-
 # Network settings
-num_cpus: 4  # Should match the CPU resources above
-num_gpus: 0  # Raspberry Pi typically has no GPU
-
-# Logging
 log_to_driver: true
 logging_level: "info"
 log_dir: "/tmp/ray/logs"
